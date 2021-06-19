@@ -28,20 +28,37 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                     conteneurProduit.innerHTML +=
                         //innerHTML me permet d'écrire du code html en lui injectant les élément de mon API 
                         `
-                            <article class="produit"> 
-                                <img class="photoPeluche" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
-                                 <div class="descritpion">
-                                   <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API-->
-                                   <h3 id="prix">${element.price / 100}€</h3>
-                                   </div>
-                                <p>${element.description}</p>
-                                <form action="">
-                                <label for="">
-                                    <select name="choixCouleur" id="choixCouleur">
-                                            ${colorElement}
-                                    </select >
-                                </label >
-                           </article >
+                        <article class="produit article"> 
+                                <img class="photoPelucheProduit" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
+                                 <div class="description">
+                                   <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
+                                   <p>${element.description}</p>  
+                                     <div class="formulaire">
+                                       <form action="">
+                                          <label for="choixCouleur"></label >  
+                                              <select name="choixCouleur" id="choixCouleur"  class="select">
+                                                  ${colorElement}
+                                              </select >    
+                                       </form>
+                                       <form action="">
+                                          <label for="quantite"></label>
+                                            <select name="quantite" id="quantite" class="select">
+                                               <option class="optQuantite" value="1">1</option>
+                                               <option class="optQuantite" value="2">2</option>
+                                               <option class="optQuantite" value="3">3</option>
+                                               <option class="optQuantite" value="4">4</option>
+                                               <option class="optQuantite" value="5">5</option>
+                                               <option class="optQuantite" value="6">6</option>
+                                            </select>
+                                       </form> 
+                                     </div>   
+                                        <h3 id="prix">${element.price / 100}€</h3>
+                                 </div>      
+                        </article >
+                          <div class="bouton">        
+                              <button id="ajoutPanier" class="btn btnPanier grdBtn">Ajouter au panier</button>
+                              <button class="btn grdBtn" onclick="window.location.href ='panier.html';">Voir le panier</button>
+                         </div>  
                         `
                     document.getElementById("ajoutPanier").addEventListener('click', function () {
                         ajoutPanier({
@@ -53,6 +70,7 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                             quantite: parseInt(document.getElementById("quantite").value),
                             _id: element._id
                         });
+                        alert(`l'article ${element.name} été ajouté au panier`)
                     });
                 });
         }

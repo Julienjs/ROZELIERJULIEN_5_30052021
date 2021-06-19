@@ -16,18 +16,40 @@
     <header>
         <nav>
             <img class="logo" src="../back-end/images/orinoco.png" alt="logo Orinoco">
-            <ul>
-                <li><a href="#">identifiez-vous </a></a></li>
-                <img class="panier" src="../back-end/images/caddie.png" alt="panier">
-            </ul>
+            <img class="panier" src="../back-end/images/caddie.png" alt="panier">
         </nav>
     </header>
     <main>
-        <section id="conteneurPanier"></section>
+        <h1 id="titrePanier">Votre panier</h1>
+        <section id="conteneurPanier">
+            <div id="listeProduit"></div>
+            <div>Sous-Total: <span id="prixTotal"></span></div>
+
+        </section>
         <p id="panierVide"></p>
+        <section id="formulaire">
+            <form action="coordoneesClient" id="coordoneesClient">
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label for="nom">Entrez votre nom</label>
+                    <input type="text" name="nom" placeholder="Nom">
+                    <label for="prenom">Entrez votre prénom</label>
+                    <input type="text" name="prenom" placeholder="Prénom">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Adresse email">
+                    <label for="adresse">Entrez votre adresse</label>
+                    <input type="text" name="adresse" placeholder="Adresse">
+                    <label for="nom">Entrez votre ville</label>
+                    <input type="text" name="ville" placeholder="Ville">
+                    <input type="submit" value="Confirmation de la commande" id="confirmation">
+                </fieldset>
+            </form>
+            <p id="erreur"></p>
+        </section>
     </main>
-    <script src="panier.js"></script>
     <script src="gestionPanier.js"></script>
+    <script src="panier.js"></script>
+
 </body>
 
 
