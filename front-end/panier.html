@@ -26,29 +26,24 @@
         <section id="conteneurPanier">
             <div id="listeProduitVide"></div>
             <div id="listeProduit"></div>
+            <div id="sousTotal">Sous-Total: <span id="prixTotal"></span></div>
+            <button class=" btn ViderLePanier">Vider le panier</button>
+            <p id="panierVide"></p>
         </section>
-        <div id="sousTotal">Sous-Total: <span id="prixTotal"></span></div>
-        <button class=" btn ViderLePanier">vider le panier</button>
-        <p id="panierVide"></p>
         <section id="formulaire">
             <form action="#" id="coordoneesClient">
                 <fieldset>
-                    <legend>Vos coordonnées</legend>
+                    <legend>Entrée vos coordonnées</legend>
                     <label for="nom">Entrez votre nom</label>
                     <input id="nom" class="input" type="text" name="nom" placeholder="Nom" required>
-                    <div class="msg_erreur">veuillez indiquer votre nom</div>
                     <label for="prenom">Entrez votre prénom</label>
                     <input id="prenom" class="input" type="text" name="prenom" placeholder="Prénom" required>
-                    <div class=" msg_erreur">veuillez indiquer votre prénom</div>
                     <label for="email">Email</label>
                     <input id="email" class="input" type="email" name="email" placeholder="Adresse email" required>
-                    <div class="msg_erreur">veuillez indiquer une adresse mail valide</div>
                     <label for="adresse">Entrez votre adresse</label>
                     <input id="adresse" class="input" type="text" name="adresse" placeholder="Adresse" required>
-                    <div class="msg_erreur">veuillez indiquer votre adresse </div>
                     <label for="nom">Entrez votre ville</label>
                     <input id="ville" class="input" type="text" name="ville" placeholder="Ville" required>
-                    <div class="msg_erreur">veuillez indiquer votre ville</div>
                     <input type="submit" value="Confirmation de la commande" class="btn">
                 </fieldset>
             </form>
@@ -73,6 +68,7 @@
     </footer>
     <script src="/front-end/js/gestionPanier.js"></script>
     <script src="/front-end/js/panier.js"></script>
+    <script src="/front-end/js/produit.js"></script>
 
 </body>
 

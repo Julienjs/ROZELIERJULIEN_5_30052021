@@ -16,7 +16,7 @@ if (panier.length === 0) {
 
     listeProduitVide.innerHTML +=
         `<p class="panierVide">Votre panier est vide</p>
-        <button class="grdBtn btnPanierVide" onclick="window.location.href ='index.html';">Voir les produits disponible</button> 
+        <button class=" btn btnPanierVide" onclick="window.location.href ='index.html';">Voir les produits disponible</button> 
         `
 } else {
     for (let produit of panier) {
@@ -31,9 +31,14 @@ if (panier.length === 0) {
         <div class="descriptionPanier">
                <p class="descriptionArticle"><span class="gras">${produit.name}</span>, ${produit.description}</p>
                <h3 class="prix prixPanier">${produit.price / 100}€</h3>     
-               <button class=" grdBtn btnSupprimer" data-id="${produit._id}" data-color="${produit.color}">Supprimer
-               </button>                 
-            </div>                          
+               <button class="btn btnSupprimer" data-id="${produit._id}" data-color="${produit.color}">Supprimer
+               </button>             
+        </div>    
+            <div class="popup">
+            <div class="textePopup">
+                <p>Article supprimer</p>
+            </div>
+        </div>                             
         </article > 
          
  `
@@ -51,8 +56,9 @@ for (let btn of btnSupprimer) {
             color: event.target.dataset.color
         });
         event.target.closest(".articlePanier").remove();
-        afficherTotal();
         window.location.reload();
+        afficherTotal();
+        ouvrirPopUp();
     })
 }
 

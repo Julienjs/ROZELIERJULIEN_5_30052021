@@ -33,7 +33,7 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                  <img class="photoPeluche" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
                                    <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
                                    <p>${element.description}</p>  
-                                     <div class="formulaire">
+                                     <div class="formulaireSelect">
                                        <form action="#">
                                           <label for="choixCouleur">Couleur:</label >  
                                               <select name="choixCouleur" id="choixCouleur">
@@ -60,9 +60,9 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                  </div>      
                         </article >
                           <div class="bouton">        
-                              <button id="ajoutPanier" class="grdBtn">Ajouter au panier</button>
-                              <button class="grdBtn" onclick="window.location.href ='index.html';">Continuer vos achats</button>
-                              <button class="grdBtn" onclick="window.location.href ='panier.html';">Voir le panier</button>
+                              <button id="ajoutPanier" class="btn">Ajouter au panier</button>
+                              <button class="btn" onclick="window.location.href ='index.html';">Continuer vos achats</button>
+                              <button class="btn" onclick="window.location.href ='panier.html';">Voir le panier</button>
                          </div>  
                         `
 

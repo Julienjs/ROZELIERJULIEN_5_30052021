@@ -20,6 +20,7 @@ p{
     width: 40px;
     height: 40px;
 }
+
 nav{
     background-color: rgba(231, 225, 243, 0.993);
     display: flex;
@@ -37,6 +38,7 @@ h1{
 }
 
 section{
+    margin: 0 5px;
     display: flex;
     flex-direction: column;
 }
@@ -91,7 +93,7 @@ li{
     justify-content: center;
     align-items: center;
 }
-button{
+.btn{
     background-color: rgba(231, 225, 243, 0.993);
     width: 98%;
     height: 50px;
@@ -138,6 +140,7 @@ button:active{
            opacity: 0;
         }
     }
+
 .textePopup{
     text-align: center;
     margin-top: 30px;
@@ -215,14 +218,14 @@ button:active{
 }
 
 /* produit */
-#conteneurProduit{
+/* #conteneurProduit{
     height: 980px;
-}
+} */
 
 .articleProduit{
     margin: 0 auto 0 auto;
     width:360px;
-    height:900px;
+    height:800px;
     cursor: pointer;
 }
 
@@ -269,13 +272,11 @@ select{
 .prixProduit{
      position: absolute;
      left: 300px;
+     margin-top: 50px;
      font-size: 2em;
 }
 
 /* panier */
-#conteneurPanier{
-    
-}
 .panierVide{
     font-size: 2em;
     text-align: center;
@@ -284,11 +285,8 @@ select{
 .articlePanier{
     display: flex;
     margin-bottom: 20px;
-}
-
-#listeProduit{
-    border-bottom: solid black;
-    height: 200px;
+    width: 100%;
+    border-bottom: 2px solid black;
 }
 
 .photoPeluchePanier{
@@ -319,16 +317,42 @@ select{
 
 .btnSupprimer{
     margin-top: 10px;
-    width: 50%;
+    width: 70%;
 }
 
 .btnPanierVide {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: auto;
+    width: 100%;  
 }
+
+#sousTotal{
+    font-size: 2em;
+    font-weight: 900;
+}
+
+fieldset{
+    border: 3px double rgb(61, 60, 60);
+}
+legend{
+    font-size: 1.5em;
+}
+label{
+    width: 100%;
+}
+.input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border:none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%) inset;
+}
+ ::placeholder{
+     padding-left: 10px;
+ }
 
 /* confirmation */
 
