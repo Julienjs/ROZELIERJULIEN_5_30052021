@@ -28,38 +28,44 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                     conteneurProduit.innerHTML +=
                         //innerHTML me permet d'écrire du code html en lui injectant les élément de mon API 
                         `
-                        <article class="produit article"> 
-                                <img class="photoPelucheProduit" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
-                                 <div class="description">
+                        <article class="article articleProduit">      
+                                 <div class=" description descriptionProduit">
+                                 <img class="photoPeluche" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
                                    <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
                                    <p>${element.description}</p>  
                                      <div class="formulaire">
-                                       <form action="">
-                                          <label for="choixCouleur"></label >  
-                                              <select name="choixCouleur" id="choixCouleur"  class="select">
+                                       <form action="#">
+                                          <label for="choixCouleur">Couleur:</label >  
+                                              <select name="choixCouleur" id="choixCouleur">
                                                   ${colorElement}
                                               </select >    
                                        </form>
-                                       <form action="">
-                                          <label for="quantite"></label>
-                                            <select name="quantite" id="quantite" class="select">
+                                       <h3 class="prix prixProduit">${element.price / 100}€</h3>
+                                       <form action="#">
+                                          <label for="quantite">Quantité:</label>
+                                            <select name="quantite" id="quantite">
                                                <option class="optQuantite" value="1">1</option>
                                                <option class="optQuantite" value="2">2</option>
                                                <option class="optQuantite" value="3">3</option>
                                                <option class="optQuantite" value="4">4</option>
                                                <option class="optQuantite" value="5">5</option>
                                                <option class="optQuantite" value="6">6</option>
+                                               <option class="optQuantite" value="7">7</option>
+                                               <option class="optQuantite" value="8">8</option>
+                                               <option class="optQuantite" value="9">9</option>
+                                               <option class="optQuantite" value="10">10</option>
                                             </select>
                                        </form> 
                                      </div>   
-                                        <h3 id="prix">${element.price / 100}€</h3>
                                  </div>      
                         </article >
                           <div class="bouton">        
-                              <button id="ajoutPanier" class="btn btnPanier grdBtn">Ajouter au panier</button>
-                              <button class="btn grdBtn" onclick="window.location.href ='panier.html';">Voir le panier</button>
+                              <button id="ajoutPanier" class="grdBtn">Ajouter au panier</button>
+                              <button class="grdBtn" onclick="window.location.href ='index.html';">Continuer vos achats</button>
+                              <button class="grdBtn" onclick="window.location.href ='panier.html';">Voir le panier</button>
                          </div>  
                         `
+
                     document.getElementById("ajoutPanier").addEventListener('click', function () {
                         ajoutPanier({
                             name: element.name,
@@ -70,11 +76,20 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                             quantite: parseInt(document.getElementById("quantite").value),
                             _id: element._id
                         });
-                        alert(`l'article ${element.name} été ajouté au panier`)
+                        ouvrirPopUp();
                     });
                 });
         }
     });
+function ouvrirPopUp() {
+    let popUp = document.querySelector(".popup");
+    popUp.classList.add('show');
+    setTimeout(function () {
+        popUp.classList.remove('show');
+    }, 3000);
+
+}
+
 
 
 

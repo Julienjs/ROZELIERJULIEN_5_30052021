@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/V.mobile.css">
     <link rel="stylesheet" media="screen and (min-width:768px) and (max-width:1366px)" href="css/V.tablette.css">
     <link rel="stylesheet" media="screen and (min-width:1367px)" href="css/V.desktop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/3dcad16f7a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -22,33 +24,55 @@
     <main>
         <h1 id="titrePanier">Votre panier</h1>
         <section id="conteneurPanier">
+            <div id="listeProduitVide"></div>
             <div id="listeProduit"></div>
-            <div>Sous-Total: <span id="prixTotal"></span></div>
-
         </section>
+        <div id="sousTotal">Sous-Total: <span id="prixTotal"></span></div>
+        <button class=" btn ViderLePanier">vider le panier</button>
         <p id="panierVide"></p>
         <section id="formulaire">
-            <form action="coordoneesClient" id="coordoneesClient">
+            <form action="#" id="coordoneesClient">
                 <fieldset>
                     <legend>Vos coordonnées</legend>
                     <label for="nom">Entrez votre nom</label>
-                    <input type="text" name="nom" placeholder="Nom">
+                    <input id="nom" class="input" type="text" name="nom" placeholder="Nom" required>
+                    <div class="msg_erreur">veuillez indiquer votre nom</div>
                     <label for="prenom">Entrez votre prénom</label>
-                    <input type="text" name="prenom" placeholder="Prénom">
+                    <input id="prenom" class="input" type="text" name="prenom" placeholder="Prénom" required>
+                    <div class=" msg_erreur">veuillez indiquer votre prénom</div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Adresse email">
+                    <input id="email" class="input" type="email" name="email" placeholder="Adresse email" required>
+                    <div class="msg_erreur">veuillez indiquer une adresse mail valide</div>
                     <label for="adresse">Entrez votre adresse</label>
-                    <input type="text" name="adresse" placeholder="Adresse">
+                    <input id="adresse" class="input" type="text" name="adresse" placeholder="Adresse" required>
+                    <div class="msg_erreur">veuillez indiquer votre adresse </div>
                     <label for="nom">Entrez votre ville</label>
-                    <input type="text" name="ville" placeholder="Ville">
-                    <input type="submit" value="Confirmation de la commande" id="confirmation">
+                    <input id="ville" class="input" type="text" name="ville" placeholder="Ville" required>
+                    <div class="msg_erreur">veuillez indiquer votre ville</div>
+                    <input type="submit" value="Confirmation de la commande" class="btn">
                 </fieldset>
             </form>
-            <p id="erreur"></p>
         </section>
     </main>
-    <script src="gestionPanier.js"></script>
-    <script src="panier.js"></script>
+    <footer>
+        <div class="footer">
+            <h3>Comptes</h3>
+            <ul>
+                <li>Inscritpion</li>
+                <li>Modification de vos informations</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <h3>Besoin d'aide ?</h3>
+            <ul>
+                <li>Ou suivre votre commande</li>
+                <li>Service client</li>
+                <li>Retour et Remplacement</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/front-end/js/gestionPanier.js"></script>
+    <script src="/front-end/js/panier.js"></script>
 
 </body>
 

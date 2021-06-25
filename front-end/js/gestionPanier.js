@@ -1,6 +1,4 @@
 
-
-
 function ajoutPanier(produit) {
     let panier = recuperationDuPanier();
     let produitTrouve = panier.find(p => p._id == produit._id && p.color == produit.color);
@@ -9,7 +7,7 @@ function ajoutPanier(produit) {
     } else {
         produitTrouve.quantite += produit.quantite;
     }
-    enregsitrerPanier(panier);
+    enregistrerPanier(panier);
 
 }
 
@@ -25,11 +23,15 @@ function recuperationDuPanier() {
 function supprimerUnArticle(produit) {
     let panier = recuperationDuPanier();
     panier = panier.filter(p => p._id !== produit._id || p.color !== produit.color);
-    enregsitrerPanier(panier);
+    enregistrerPanier(panier);
 }
 
-function enregsitrerPanier(panier) {
+function enregistrerPanier(panier) {
     localStorage.setItem("panier", JSON.stringify(panier));
+
+}
+function viderPanier() {
+    localStorage.removeItem("panier");
 
 }
 
@@ -40,11 +42,7 @@ function prixTotal() {
         total += produit.price / 100 * produit.quantite;
     }
     return total;
-
 }
 
-function viderPanier() {
-    localStorage.removeItem("panier");
 
-}
 

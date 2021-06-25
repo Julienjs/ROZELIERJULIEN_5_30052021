@@ -12,17 +12,17 @@ fetch('http://localhost:3000/api/teddies')
                     //récupération de mon format json + callback nommer data pour récuperer tout mon tableau de mon api
                     data.forEach(element => {
                         //forEach permet de parcourir mon tableau data
-                        conteneurArticles.innerHTML +=
+                        conteneurArticlesIndex.innerHTML +=
                             //selection de ma section conteneurArticles et j'insère du code dans HTML(innerHTML+=)
                             `
-                               <article class="article">
-                                  <a href="../front-end/produit.html?id=${element._id}"> <!-- ? permet de selctionner l'ID d'un produit de l'API pour l'envoyer sur ma page produit--> 
-                                    <img class="photoPeluche" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
-                                     <div class="flex">
+                               <article class="articleIndex">
+                                  <a href="../front-end/produit.html?id=${element._id}"> <!-- ? permet de selctionner l'ID d'un produit de l'API pour l'envoyer sur ma page produit-->
+                                  <div class="description"> 
+                                  <img class="photoPeluche photoPelucheIndex" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>                     
                                        <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API-->
-                                       <h3>${element.price / 100}<strong>€</strong></h3>
-                                     </div>
-                                    <p>${element.description}</p>
+                                         <p>${element.description}</p>
+                                         <p class="prix">${element.price / 100}€</p>
+                                       </div>
                                   </a>
                                </article>
                            `

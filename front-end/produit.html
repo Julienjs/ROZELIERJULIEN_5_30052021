@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/V.mobile.css">
     <link rel="stylesheet" media="screen and (min-width:768px) and (max-width:1366px)" href="css/V.tablette.css">
     <link rel="stylesheet" media="screen and (min-width:1367px)" href="css/V.desktop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/3dcad16f7a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,18 +18,39 @@
     <header>
         <nav>
             <img class="logo" src="../back-end/images/orinoco.png" alt="logo Orinoco">
-            <img class="panier" src="../back-end/images/caddie.png" alt="panier">
+            <a href="panier.html"><img class="panier" src="../back-end/images/caddie.png" alt="panier"></a>
         </nav>
     </header>
     <main>
-        <h1>Vous avez selectionné le produit</h1>
+        <h1>Produit selectionné</h1>
         <section id="conteneurProduit"></section>
-
+        <div class="popup">
+            <div class="textePopup">
+                <p>Produit ajouté au panier</p>
+            </div>
+        </div>
     </main>
+    <footer>
+        <div class="footer">
+            <h3>Comptes</h3>
+            <ul>
+                <li>Inscritpion</li>
+                <li>Modification de vos informations</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <h3>Besoin d'aide ?</h3>
+            <ul>
+                <li>Ou suivre votre commande</li>
+                <li>Service client</li>
+                <li>Retour et Remplacement</li>
+            </ul>
+        </div>
+    </footer>
 
 
-    <script src="produit.js"></script>
-    <script src="gestionPanier.js"></script>
+    <script src="/front-end/js/produit.js"></script>
+    <script src="/front-end/js/gestionPanier.js"></script>
 </body>
 
 
