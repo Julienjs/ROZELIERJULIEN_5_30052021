@@ -1,0 +1,134 @@
+i{
+    font-size: 2em;
+}
+.btn{
+    font-weight: 600;
+    width: 40%;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+.popup{
+    width: 400px;
+    height: 200px;
+    font-weight: 900;
+    font-size: 2em;
+    bottom: 700px;
+    right: 450px;
+}
+
+.information{  
+    font-size: 1em;
+} 
+
+.information i{
+    font-size: 2.2em;   
+}
+
+.telephone{
+   margin-bottom: 0;
+}
+
+#Presentation {  
+    height: 600px;  
+}
+
+.imgPresentation{ 
+    height: 600px;  
+}
+
+.cadre{
+    height: 600px;
+}
+
+.centrerPresentation {
+    font-size: 2.8em;
+    left: 30%; 
+}
+
+.basPresentation{
+    top: 35%;
+    left: 10%;        
+    font-size: 1.8em;
+    width: 500px;       
+}  
+
+.titreSection{
+    font-size:2.5em;
+}
+
+.articleIndex{
+    width: 80%;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgb(212, 211, 211);
+    margin: 20px auto ;
+}
+
+.photoPelucheIndex{
+    width: 30%;
+    height: 350px;
+}
+
+.descriptionIndex{
+    display: flex;
+}
+
+.descriptionDesktop{
+    display: flex;
+    flex-direction: column;
+    height:350px ;
+    width: 900px;
+    justify-content: space-between;
+}
+
+ .articleProduit{
+    margin: 10px auto;
+    width:40%;
+    font-size: 1.7em;
+    height:1100px;
+    
+}
+
+.photoPelucheProduit{
+    height: 550px;
+}
+ 
+.prixProduit{
+    position: absolute;
+    left: 950px;
+    margin-top: 50px;
+}
+
+.articlePanier{
+    font-size: 1.8em;
+}
+
+.photoPeluchePanier{
+    height: 300px;
+}
+
+.descriptionPanier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.descriptionPanier p{
+    width: 800px;
+}
+
+.btnSupprimer{
+    margin-top: 10px;
+    width: 40%;
+}
+.viderLePanier{
+    width: 40%;
+    margin: 10px 0;
+}
+.submit{
+    width: 30%;
+}
+

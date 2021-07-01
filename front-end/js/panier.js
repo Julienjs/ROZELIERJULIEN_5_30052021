@@ -12,7 +12,7 @@ if (panier.length === 0) {
     document.querySelector("#sousTotal").style.display = "none";
     conteneurPanier.style.height = "400px";
     formulaire.style.display = "none";
-    document.querySelector(".ViderLePanier").style.display = "none";
+    document.querySelector(".viderLePanier").style.display = "none";
 
     listeProduitVide.innerHTML +=
         `<p class="panierVide">Votre panier est vide</p>
@@ -20,10 +20,11 @@ if (panier.length === 0) {
         `
 } else {
     for (let produit of panier) {
+        listeProduitVide.style.display = "none";
         listeProduit.innerHTML +=
             `
         <article class="articlePanier">
-        <div class="photoPanier">           
+        <div class="articlePhotoPanier">           
            <img class="photoPeluche photoPeluchePanier" alt="photo de ours en peluche" src="${produit.imageUrl}" title="Ours en peluche"/>
            <p class="quantitePanier"><span class="gras">Quantité</span> : ${produit.quantite}</p>
            <p class="couleur"><span class="gras">Couleur</span>: ${produit.color}</p>
@@ -31,7 +32,7 @@ if (panier.length === 0) {
         <div class="descriptionPanier">
                <p class="descriptionArticle"><span class="gras">${produit.name}</span>, ${produit.description}</p>
                <h3 class="prix prixPanier">${produit.price / 100}€</h3>     
-               <button class="btn btnSupprimer" data-id="${produit._id}" data-color="${produit.color}">Supprimer
+               <button class="btn btnSupprimer btnBlack" data-id="${produit._id}" data-color="${produit.color}">Supprimer
                </button>             
         </div>    
             <div class="popup">
@@ -68,7 +69,7 @@ function afficherTotal() {
 }
 afficherTotal();
 //insertion du bouton vider panier dans le HTML
-document.querySelector(".ViderLePanier").addEventListener("click", function () {
+document.querySelector(".viderLePanier").addEventListener("click", function () {
     viderPanier();
     window.location.reload();
 });

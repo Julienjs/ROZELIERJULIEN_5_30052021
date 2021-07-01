@@ -19,42 +19,61 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="../back-end/images/orinoco.png" alt="logo Orinoco">
-            <a href="panier.html"><img class="panier" src="../back-end/images/caddie.png" alt="panier"></a>
+            <a href="index.html">
+                <img class="logo" src="../back-end/images/logo-orinoco.png" alt="logo Orinoco">
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html"><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a href="index.html"> <i class="far fa-user"></i></a>
+                </li>
+                <li>
+                    <a href="panier.html"><i class="fas fa-shopping-bag"></i> </a>
+                </li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <div id="fonctionnement">
-            <h1>Faites vous livré vos articles préférés en 5 étapes</h1>
-            <div class="blocFonctionnement">
-                <span>1</span>
-                <i class="fas fa-store"></i>
-                <p>Choississez vos produits</p>
-            </div>
-            <div class="blocFonctionnement">
-                <span>2</span>
-                <i class="fas fa-shopping-cart"></i>
-                <p>Ajoutez vos articles au panier</p>
-            </div>
-            <div class="blocFonctionnement">
-                <span>3</span>
-                <i class="fas fa-align-left"></i>
-                <p>Remplissez vos coordonnées</p>
-            </div>
-            <div class="blocFonctionnement">
-                <span>4</span>
-                <i class="fas fa-credit-card"></i>
-                <p>Validez votre commande</p>
-            </div>
-            <div class="blocFonctionnement">
-                <span>5</span>
-                <i class="fas fa-shipping-fast"></i>
-                <p>Votre commande arrive chez vous</p>
-            </div>
+    <div id="conteneurInformation">
+        <div class="information">
+            <i class="far fa-credit-card"></i>
+            <h3>Paiement securisé</h3>
         </div>
-        <section id="conteneurArticlesIndex"></section>
+        <div class="information">
+            <i class="fas fa-truck"></i>
+            <h3>Livraison à domicile</h3>
+        </div>
+        <div class="information">
+            <i class="far fa-heart"></i>
+            <h3>Satisfait ou remboursé</h3>
+        </div>
+        <div class="information telephone">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Support 7/7</h3>
+        </div>
+    </div>
+    <main>
+        <div id="Presentation">
+            <img class="imgPresentation" src="../back-end/images/peluche.jpg" alt="une peluche assise">
+            <div class="cadre"></div>
+            <h1 class="centrerPresentation">Trouver des peluches de qualité<br> 100% fait main</h1>
+            <p class="basPresentation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam pariatur corporis
+                repellat recusandae doloremque cum molestias facere consequuntur unde necessitatibus odio quisquam
+                magnam, iure impedit tempore est labore expedita perspiciatis!
+            </p>
+        </div>
+        <section id="conteneurArticlesIndex">
+            <h2 class="titreSection">Peluche à adopter</h2>
+        </section>
     </main>
     <footer>
+        <img class="logoFooter" src="../back-end/images/logo-orinoco.png" alt="logo orinico">
+        <div id="reseaux">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
         <div class="footer">
             <h3>Comptes</h3>
             <ul>

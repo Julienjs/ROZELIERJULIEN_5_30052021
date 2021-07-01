@@ -17,12 +17,14 @@ fetch('http://localhost:3000/api/teddies')
                             `
                                <article class="articleIndex">
                                   <a href="../front-end/produit.html?id=${element._id}"> <!-- ? permet de selctionner l'ID d'un produit de l'API pour l'envoyer sur ma page produit-->
-                                  <div class="description"> 
+                                  <div class="description descriptionIndex "> 
                                   <img class="photoPeluche photoPelucheIndex" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>                     
-                                       <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API-->
+                                      <div class="descriptionDesktop"> 
+                                         <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API-->
                                          <p>${element.description}</p>
                                          <p class="prix">${element.price / 100}€</p>
-                                       </div>
+                                      </div> 
+                                  </div>
                                   </a>
                                </article>
                            `

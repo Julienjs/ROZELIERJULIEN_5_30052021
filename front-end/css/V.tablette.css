@@ -1,0 +1,64 @@
+.centrerPresentation {
+    font-size: 2em;
+    left: 30%; 
+}
+
+.basPresentation{
+        left: 5%;        
+        font-size: 1.2em;       
+}  
+
+section{
+    margin: auto;
+    width: 90%;
+}
+
+#conteneurArticlesIndex{
+    height: 3000px;
+} 
+
+.articleIndex{
+    width: 450px;
+    height: 500px;
+}
+
+.photoPelucheIndex{
+    height: 300px;
+    border-radius:20px 20px 0 0;
+}
+
+.btn{
+    width: 70%;
+}
+
+.prixProduit{
+    left: 550px;
+}
+
+.popup{
+    width: 300px;
+    height: 150px;
+    font-weight: 900;
+    font-size: 1.5em;
+    bottom: 400px;
+    right: 210px;
+}
+
+#listeProduitVide{
+  height: 600px;
+}
+.photoPeluchePanier{
+    width: 100%;
+    height: 200px;
+}
+
+.articlePhotoPanier{
+    font-size: 1.6em;
+}
+
+.descriptionPanier{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+

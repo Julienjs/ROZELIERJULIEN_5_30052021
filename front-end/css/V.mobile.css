@@ -2,39 +2,62 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Benne', serif;   
+    box-sizing: border-box;
 }
 /* index/produit/panier/confirmation */
 a{
     text-decoration: none;
-    color: black;
-    height: 40px;
+    color: black;  
 }
+
 p{
     margin: 0;
 }
-.logo{
-    width: 120px;
-    height: 50px;
+
+li{
+    list-style-type: none;
 }
-.panier{
-    width: 40px;
-    height: 40px;
+
+.logo{
+    margin-left: 10px;
+    width: 180px;
+    height: 130px;
+}
+
+i{
+    font-size: 1.3em;
+}
+
+.fa-shopping-bag{
+	color:transparent;
+	-webkit-text-stroke:2px black;	
 }
 
 nav{
-    background-color: rgba(231, 225, 243, 0.993);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 70px;
 }
+
+nav ul{
+    margin:5px 10px 0 0;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 h1{
     font-size: 1.8em;
-    text-align: center;
-    border-bottom: 5px double;
-    border-top:3px solid;
-    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    height: 100px;
+    margin: 0;
 }
 
 section{
@@ -43,14 +66,23 @@ section{
     flex-direction: column;
 }
 
+.titreSection{
+    border-bottom: 2px solid rgb(212, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+}
+
 .photoPeluche{
     object-fit: cover;
     width: 100%;
 }
 
 .description{
-    color: white;
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
 }
 .description h2{
@@ -61,41 +93,52 @@ section{
 .prix{
     display: flex;
     flex-direction: row-reverse;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0 15px 0 0;
 }
 
 footer{
-    background-color: rgba(231, 225, 243, 0.993);
+    background-color: rgb(68, 68, 68);
+    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
+
+.logoFooter{
+    width: 80px;
+    height: 60px;
+    padding:0 80px;
+    margin: 10px auto;
+    background-color: white;
+}
+ #reseaux{
+     width: 40%;
+     margin: 10px  auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+ }
 .footer{
     display: flex;
     flex-direction: column;
-    font-size: 0.8em;
-    margin:10px auto 0 auto;
+    width: 50%;
+    margin:0 0 10px 10px;
 }
+
 .footer h3{
-    margin: 0;
+    margin-bottom: 5px;
 }
-ul{
+
+.footer ul{
     margin: 0;
     padding: 0;
 }
-li{
-    list-style: none;
-    margin: 0;
-}
-.bouton{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .btn{
-    background-color: rgba(231, 225, 243, 0.993);
-    width: 98%;
+    font-weight: 600;
+    width: 80%;
     height: 50px;
     margin-bottom: 15px;
     padding: 0;
@@ -104,6 +147,12 @@ li{
     box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 30%);
     font-size: 1.5em;
     transition: scale;
+}
+
+.btnBlack{
+    background-color: rgb(68, 68, 68);
+    color: white;
+    
 }
 
 button:active{
@@ -124,6 +173,9 @@ button:active{
     bottom: 300px;
     right: 80px;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup.show{
@@ -141,91 +193,96 @@ button:active{
         }
     }
 
-.textePopup{
-    text-align: center;
-    margin-top: 30px;
-}
+
 /* index */
-#fonctionnement{
-    height: 500px;
-    margin: auto;  
+#conteneurInformation{
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.information{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
+    justify-content: center;
+    width: 50%;   
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    line-height: 1.2;
+    padding-top: 15px;
 }
 
-.blocFonctionnement{
+.information i{
+    font-size: 1.8em;   
+}
+
+/* .telephone{
+   margin-bottom: 15px;
+} */
+
+#Presentation {  
     position: relative;
-	display: flex;
-	align-items: center;
-	justify-content:flex-start;
-    background-color: rgba(231, 225, 243, 0.993);
-	width: 350px;
-	height: 60px;
-	margin: auto;
-	border-radius:20px;
-	box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 30%);
-	cursor: pointer;
-    transition: scale 5s;
-}
-.blocFonctionnement:hover{
-    transform: scale(1.01);
-}
-.blocFonctionnement i{
-	color:black;
-	margin: 0 15px;
+    color: white;
+    margin: 0;
+    height: 400px;
+   
 }
 
-.blocFonctionnement span{
-	position: relative;
-	right: 10px;
-	font-size: 0.7em;
-	color: white;
-	font-weight: bold;
-	background-color: #9356DC;
-	border-radius: 50%;
-	width: 25px;
-	height: 25px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.imgPresentation{ 
+    position: absolute;;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
-.blocFonctionnement p{
-	font-weight: bold;
-	text-align: left;
-	margin-left: 20px;
+.cadre{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    opacity: 0.4;
 }
+.centrerPresentation {
+    background-color: transparent;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border: none;
+    text-align: left;
+    opacity: 2;
+    
+  }
 
-#conteneurArticlesIndex{
-    height: 2400px;
-}
+.basPresentation{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        font-weight: 700;
+        font-size: 1em;
+        text-align: left;
+}  
 
 .articleIndex{
-    background-color: rgb(61, 60, 60);
     margin: auto;
-    width:360px;
-    height: 420px;
-    border-radius:20px;
-    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 40%);
-    cursor: pointer;	
+    width:80%;
+    height: 400px;
+    cursor: pointer;
+    margin-bottom: 20px;	
 }
 
 .photoPelucheIndex{
-    height: 230px;
-    border-radius:20px 20px 0 0;
+    height: 220px;
 }
 
 /* produit */
-/* #conteneurProduit{
-    height: 980px;
-} */
-
 .articleProduit{
-    margin: 0 auto 0 auto;
-    width:360px;
-    height:800px;
+    margin: 20px auto 40px auto;
+    width:80%;
+    /* height:650px; */
     cursor: pointer;
 }
 
@@ -235,11 +292,9 @@ button:active{
     height: 600px;
 }
 .descriptionProduit h2{
-    font-size: 2em;
     margin-bottom: 20px;
 }
 .descriptionProduit p{
-    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
@@ -262,7 +317,7 @@ select{
 }
 
 #choixCouleur{
-    width: 150px;
+    width: 40%;
 }
 
 #quantite{
@@ -275,8 +330,20 @@ select{
      margin-top: 50px;
      font-size: 2em;
 }
+.bouton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* panier */
+#listeProduitVide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .panierVide{
     font-size: 2em;
     text-align: center;
@@ -294,7 +361,7 @@ select{
     height: 130px;
 }
 
-.photoPanier{
+.articlePhotoPanier{
     width:400px ;
     display: flex;
     flex-direction: column;
@@ -336,7 +403,7 @@ fieldset{
     border: 3px double rgb(61, 60, 60);
 }
 legend{
-    font-size: 1.5em;
+    font-size: 2em;
 }
 label{
     width: 100%;
@@ -355,4 +422,21 @@ label{
  }
 
 /* confirmation */
+.commande{
+    color: white;
+    background-color: rgb(68, 68, 68);
+    margin: 50px auto;
+    padding: 10px;
+    width: 85%;
+    height: 405px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5em;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 40%);
+}
 
+.FSize{
+    font-weight: 900;
+}

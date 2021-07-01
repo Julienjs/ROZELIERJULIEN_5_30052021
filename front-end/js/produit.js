@@ -30,8 +30,9 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                         `
                         <article class="article articleProduit">      
                                  <div class=" description descriptionProduit">
-                                 <img class="photoPeluche" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
-                                   <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
+                                 <img class="photoPeluche photoPelucheProduit" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
+                                  <div class="descriptif"> 
+                                 <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
                                    <p>${element.description}</p>  
                                      <div class="formulaireSelect">
                                        <form action="#">
@@ -56,13 +57,14 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                                <option class="optQuantite" value="10">10</option>
                                             </select>
                                        </form> 
-                                     </div>   
+                                     </div>
+                                       </div>   
                                  </div>      
                         </article >
                           <div class="bouton">        
-                              <button id="ajoutPanier" class="btn">Ajouter au panier</button>
+                              <button id="ajoutPanier" class="btn btnBlack">Ajouter au panier</button>
                               <button class="btn" onclick="window.location.href ='index.html';">Continuer vos achats</button>
-                              <button class="btn" onclick="window.location.href ='panier.html';">Voir le panier</button>
+                              <button class="btn btnBlack" onclick="window.location.href ='panier.html';">Voir le panier</button>
                          </div>  
                         `
 

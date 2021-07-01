@@ -17,13 +17,27 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="../back-end/images/orinoco.png" alt="logo Orinoco">
-            <a href="panier.html"><img class="panier" src="../back-end/images/caddie.png" alt="panier"></a>
+            <a href="index.html">
+                <img class="logo" src="../back-end/images/logo-orinoco.png" alt="logo Orinoco">
+            </a>
+            <ul>
+                <a href="index.html">
+                    <li><i class="fas fa-search"></i></li>
+                </a>
+                <a href="index.html">
+                    <li><i class="far fa-user"></i></li>
+                </a>
+                <a href="panier.html">
+                    <li><i class="fas fa-shopping-bag"></i></li>
+                </a>
+            </ul>
         </nav>
     </header>
     <main>
-        <h1>Produit selectionné</h1>
-        <section id="conteneurProduit"></section>
+        <h1>Produit</h1>
+        <section id="conteneurProduit">
+            <h2 class="titreSection">Vous avez selectionné le produit</h2>
+        </section>
         <div class="popup">
             <div class="textePopup">
                 <p>Produit ajouté au panier</p>
@@ -31,6 +45,12 @@
         </div>
     </main>
     <footer>
+        <img class="logoFooter" src="../back-end/images/logo-orinoco.png" alt="logo orinico">
+        <div id="reseaux">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
         <div class="footer">
             <h3>Comptes</h3>
             <ul>
