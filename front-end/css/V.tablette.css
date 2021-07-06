@@ -1,6 +1,6 @@
 .centrerPresentation {
     font-size: 2em;
-    left: 30%; 
+    left: 240px; 
 }
 
 .basPresentation{
@@ -26,6 +26,16 @@ section{
     height: 300px;
     border-radius:20px 20px 0 0;
 }
+.articleProduit{
+    width: 70%;
+    height: 700px;
+    margin: 20px auto 12% auto;
+}
+
+.photoPelucheProduit{
+    width:90%;
+    
+}
 
 .btn{
     width: 70%;
@@ -40,8 +50,8 @@ section{
     height: 150px;
     font-weight: 900;
     font-size: 1.5em;
-    bottom: 400px;
-    right: 210px;
+    bottom: 60%;
+    right: 30%;
 }
 
 #listeProduitVide{

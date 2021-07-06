@@ -27,6 +27,7 @@ if (panier.length === 0) {
         <div class="articlePhotoPanier">           
            <img class="photoPeluche photoPeluchePanier" alt="photo de ours en peluche" src="${produit.imageUrl}" title="Ours en peluche"/>
            <p class="quantitePanier"><span class="gras">Quantité</span> : ${produit.quantite}</p>
+           <!--  <p><button id="boutonMoins">-</button><span id="nb">${produit.quantite}</span><button id= "boutonPlus">+</button></p>-->
            <p class="couleur"><span class="gras">Couleur</span>: ${produit.color}</p>
         </div>   
         <div class="descriptionPanier">
@@ -44,9 +45,6 @@ if (panier.length === 0) {
          
  `
     }
-
-    // } if (i === panier.length) {
-    //     sectionPanier.innerHTML = structureProduitPanier;
 }
 //supprimer un article du panierproduit
 let btnSupprimer = document.querySelectorAll(".btnSupprimer");
@@ -67,6 +65,7 @@ for (let btn of btnSupprimer) {
 function afficherTotal() {
     prixTotalElement.innerHTML = ` ${prixTotal()}€`;
 }
+
 afficherTotal();
 //insertion du bouton vider panier dans le HTML
 document.querySelector(".viderLePanier").addEventListener("click", function () {
@@ -90,7 +89,6 @@ document.querySelector("#coordoneesClient .btn").addEventListener("click", funct
             products.push(produit._id);
         }
         const commande = { contact, products };
-        console.log(commande);
         const envoi = {
             method: "POST",
             body: JSON.stringify(commande),
@@ -109,7 +107,8 @@ document.querySelector("#coordoneesClient .btn").addEventListener("click", funct
                         firstName: res.contact.firstName,
                         address: res.contact.address,
                         city: res.contact.city,
-                        orderId: res.orderId
+                        orderId: res.orderId,
+                        email: res.contact.email
                     }
                     localStorage.setItem("confirmation", JSON.stringify(confirmation));
                     window.location.assign(`/front-end/confirmation.html`);

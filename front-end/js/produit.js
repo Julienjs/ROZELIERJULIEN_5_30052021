@@ -1,12 +1,9 @@
 //récuperation de la chaîne de requête dans l'url
 const recuperationUrlId = window.location.search;//window.location=Récupère/définit l'emplacement, ou l'URL en cours, de l'objet de fenêtre.
 //search est une propriéter qui récupère la partie de l'URL qui suit le symbole "?"
-
-
 //extraire l'ID 
 const extractionID = new URLSearchParams(recuperationUrlId);
-//variable contenant le constructeur (URLSearchPparams) précédent de l'opérateur new avec la variable qui récupère mon URL
-
+//variable contenant le constructeur (URLSearchParams) précédent de l'opérateur new avec la variable qui récupère mon URL
 const ID = extractionID.get("id")
 //La syntaxe get permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 const conteneurProduit = document.getElementById('conteneurProduit');
@@ -33,7 +30,8 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                  <img class="photoPeluche photoPelucheProduit" alt="photo de ours en peluche" src="${element.imageUrl}" title="Ours en peluche"/>
                                   <div class="descriptif"> 
                                  <h2>${element.name}</h2> <!-- $ permet d'ajouter ma variable suivis de l'element que l'on souhaite soustraire dans l'API--> 
-                                   <p>${element.description}</p>  
+                                   <p>${element.description}</p> 
+                                   <div id="conteneurFormulaire">
                                      <div class="formulaireSelect">
                                        <form action="#">
                                           <label for="choixCouleur">Couleur:</label >  
@@ -41,7 +39,6 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                                   ${colorElement}
                                               </select >    
                                        </form>
-                                       <h3 class="prix prixProduit">${element.price / 100}€</h3>
                                        <form action="#">
                                           <label for="quantite">Quantité:</label>
                                             <select name="quantite" id="quantite">
@@ -57,6 +54,8 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                                                <option class="optQuantite" value="10">10</option>
                                             </select>
                                        </form> 
+                                     </div>
+                                       <h3 class="prix prixProduit">${element.price / 100}€</h3>
                                      </div>
                                        </div>   
                                  </div>      
@@ -80,16 +79,20 @@ fetch(`http://localhost:3000/api/teddies/${ID}`)
                         });
                         ouvrirPopUp();
                     });
-                });
+                })
+        } else {/*Sinon afficher message d'erreur*/
+            throw new Error('Erreur de chargement !')
         }
-    });
+    }).catch(function (erreur) {
+        conteneurProduit.innerHTML = "<strong>Erreur de chargement!</strong>"
+        console.log(erreur)
+    })
 function ouvrirPopUp() {
     let popUp = document.querySelector(".popup");
     popUp.classList.add('show');
     setTimeout(function () {
         popUp.classList.remove('show');
     }, 3000);
-
 }
 
 

@@ -31,10 +31,13 @@ fetch('http://localhost:3000/api/teddies')
                     });
                 });
         } else {
-            console.log(erreur);
+            throw new Error('Erreur de chargement !')
         }
-    });
-
+    }).catch(function (erreur) {
+        conteneurArticlesIndex.innerHTML = "<strong>Erreur de chargement !</strong>"
+        console.log(erreur)
+    }
+    )
 
 
 

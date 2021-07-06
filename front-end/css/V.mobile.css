@@ -170,8 +170,8 @@ button:active{
     border-radius: 20px;
     color: white;
     position: fixed;
-    bottom: 300px;
-    right: 80px;
+    bottom: 30%;
+    right: 18%; 
     padding: 0 20px;
     display: flex;
     justify-content: center;
@@ -192,7 +192,11 @@ button:active{
            opacity: 0;
         }
     }
-
+    
+strong{
+    margin: 20px auto;
+    font-size: 2em;
+}
 
 /* index */
 #conteneurInformation{
@@ -282,7 +286,6 @@ button:active{
 .articleProduit{
     margin: 20px auto 40px auto;
     width:80%;
-    /* height:650px; */
     cursor: pointer;
 }
 
@@ -296,6 +299,16 @@ button:active{
 }
 .descriptionProduit p{
     margin-bottom: 20px;
+}
+
+#conteneurFormulaire{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.formulaireSelect{
+    width: 335px;
 }
 
 form{
@@ -317,18 +330,16 @@ select{
 }
 
 #choixCouleur{
-    width: 40%;
+    width: 50%;
 }
 
 #quantite{
-    width: 100px;
+    width: 25%;
 }
 
 .prixProduit{
-     position: absolute;
-     left: 300px;
-     margin-top: 50px;
-     font-size: 2em;
+    margin: 150px 0 0 0;
+    font-size: 2.5em;
 }
 .bouton{
     display: flex;
