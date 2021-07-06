@@ -48,13 +48,17 @@
                 <fieldset>
                     <legend>Entrée vos coordonnées</legend>
                     <label for="nom">Entrez votre nom</label>
-                    <input id="nom" class="input" type="text" name="nom" placeholder="Nom" required>
+                    <input id="nom" class="input" type="text" name="nom" placeholder="Nom" pattern="[a-zA-Z]{1,20}"
+                        required>
                     <label for="prenom">Entrez votre prénom</label>
-                    <input id="prenom" class="input" type="text" name="prenom" placeholder="Prénom" required>
+                    <input id="prenom" class="input" type="text" name="prenom" placeholder="Prénom"
+                        pattern="[a-zA-Z]{1,20}" required>
                     <label for="email">Email</label>
-                    <input id="email" class="input" type="email" name="email" placeholder="Adresse email" required>
+                    <input id="email" class="input" type="email" name="email" placeholder="Adresse email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <label for="adresse">Entrez votre adresse</label>
-                    <input id="adresse" class="input" type="text" name="adresse" placeholder="Adresse" required>
+                    <input id="adresse" class="input" type="text" name="adresse" placeholder="Adresse"
+                        pattern="[a-zA-Z0-9 ]{1,100}" required>
                     <label for="nom">Entrez votre ville</label>
                     <input id="ville" class="input" type="text" name="ville" placeholder="Ville" required>
                     <input type="submit" value="Confirmation" class="btn btnBlack ">
@@ -69,20 +73,22 @@
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
         </div>
-        <div class="footer">
-            <h3>Comptes</h3>
-            <ul>
-                <li>Inscritpion</li>
-                <li>Modification de vos informations</li>
-            </ul>
-        </div>
-        <div class="footer">
-            <h3>Besoin d'aide ?</h3>
-            <ul>
-                <li>Ou suivre votre commande</li>
-                <li>Service client</li>
-                <li>Retour et Remplacement</li>
-            </ul>
+        <div id="listeFooter">
+            <div class="footer">
+                <h3>Comptes</h3>
+                <ul>
+                    <li>Inscritpion</li>
+                    <li>Modification de vos informations</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <h3>Besoin d'aide ?</h3>
+                <ul>
+                    <li>Ou suivre votre commande</li>
+                    <li>Service client</li>
+                    <li>Retour et Remplacement</li>
+                </ul>
+            </div>
         </div>
     </footer>
     <script src="/front-end/js/gestionPanier.js"></script>

@@ -129,3 +129,11 @@ nav ul{
     width: 30%;
 }
 
+.footer{
+    width: 200px;
+}
+
+#listeFooter{
+    margin: 10px 30px;
+    display: flex;
+}
