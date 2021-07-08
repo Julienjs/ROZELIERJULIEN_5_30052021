@@ -33,7 +33,7 @@ if (panier.length === 0) {
         <div class="descriptionPanier">
                <p class="descriptionArticle"><span class="gras">${produit.name}</span>, ${produit.description}</p>
                <h3 class="prix prixPanier">${produit.price / 100}€</h3>     
-               <button class="btn btnSupprimer btnBlack" data-id="${produit._id}" data-color="${produit.color}">Supprimer
+               <button class="btn btnSupprimer btnBlack btnPanier" data-id="${produit._id}" data-color="${produit.color}">Supprimer
                </button>             
         </div>    
             <div class="popup">

@@ -41,6 +41,16 @@ section{
     width: 70%;
 }
 
+.btnSupprimer{
+    font-size: 1.2em;
+}
+
+.btnPanier{
+    width: 45%;
+    height: 60px;
+    
+}
+
 .prixProduit{
     left: 550px;
 }
@@ -70,5 +80,4 @@ section{
     font-size: 1.5em;
     text-align: center;
 }
-
 
